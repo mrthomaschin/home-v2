@@ -107,11 +107,7 @@ class Home extends Component {
                                         <div class="button-dark-blue">Learn More</div>
                                     </Link>
                                     </div>
-                                    <a
-                                    class="button-light-blue resume-link"
-                                    href="Thomas_Chin_Resume.pdf"
-                                    download
-                                    >
+                                    <a class="button-light-blue resume-link" href="Thomas_Chin_Resume.pdf" download>
                                     Resumé
                                     </a>
                                 </div>
@@ -341,7 +337,7 @@ class Home extends Component {
                                     <div class="col-md-2">
                                     <a
                                         class="social"
-                                        href="https://www.instagram.com/chinsanity_/"
+                                        href="https://www.instagram.com/thomas__chin/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >

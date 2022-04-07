@@ -67,7 +67,7 @@ class SocialMedia extends Component {
                     <div class="col-md-2">
                       <a
                         class="social"
-                        href="https://www.instagram.com/chinsanity_/"
+                        href="https://www.instagram.com/thomas__chin/"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
