@@ -1,0 +1,108 @@
+@font-face {
+  font-family: "sf-pro";
+  src: url("../../Assets/Fonts/SF-Pro-Text-Thin.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "circlular-std-book";
+  src: url("../../Assets/Fonts/CircularStd-Book.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "darkline";
+  src: url("../../Assets/Fonts/darkline.otf") format("opentype");
+}
+
+#main-page-photo {
+  background-image: url("../../Assets/Images/photography/bg.jpg");
+  background-size: 100%;
+  background-position-y: -200px;
+}
+
+#short-page {
+  background: linear-gradient(#ffffff, transparent);
+  background-color: #f1f0f0;
+}
+
+.slides {
+  height: 100%;
+  background-color: #f1f0f0;
+  padding-bottom: 50px;
+}
+
+.slide-container {
+  width: 70%;
+  margin: auto;
+}
+
+.each-slide > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  width: auto;
+}
+
+.header-text {
+  font-family: "darkline";
+  font-size: 80px;
+}
+
+#main-text {
+  font-family: "darkline";
+  font-size: 100px;
+  color: #ffffff;
+}
+
+.text {
+  font-family: "darkline";
+  font-size: 50px;
+  color: #ffffff;
+}
+
+.text-body {
+  font-family: "sf-pro";
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+  font-size: 20px;
+  color: #000000;
+}
+
+.text-box {
+  margin: auto;
+  padding-top: 60px;
+  width: 1000px;
+  height: 100%;
+}
+
+.text-box-main {
+  margin: auto;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  width: 100%;
+  height: 100%;
+}
+
+.row {
+  margin-right: 20px;
+  margin-left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rectangle-thin {
+  height: 5px;
+  width: 1000px;
+  background-color: #000000;
+  margin-left: -0px;
+}
+
+.photos-img {
+  max-width: 850px;
+  padding-top: 40px;
+}
+
+.photos-profile-img {
+  width: 100%;
+}
