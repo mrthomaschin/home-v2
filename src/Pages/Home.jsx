@@ -1,0 +1,382 @@
+import Fade from "react-reveal/Fade";
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+
+import NavBar from "../Components/navbar";
+import Proj from "../Data/projects.json";
+import "./CSS/home.css";
+
+function AddProject() {
+    return (
+      <div class="text-box-projects">
+        {Proj.Projects.map((project) => {
+          return (
+            <div class="project-brief-section">
+              <div class="project-brief-box shadow">
+                <div class="container">
+                  <div class="row">
+                    <div class="project-brief-title project-brief-text">
+                      {project.title}
+                    </div>
+                    <div class="project-brief-text project-brief-body">
+                      {project.descriptionbrief}
+                    </div>
+                    <div class="project-brief-text align-right">
+                      <HashLink
+                        class="nav-link project-link"
+                        to={"/projects#" + project.section}
+                      >
+                        Project Page
+                      </HashLink>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    );
+  }
+
+class Home extends Component {
+    render() {
+        return (
+            <div>
+                <head>
+                    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+                    <meta property="og:title" content="Thomas Chin: Portfolio Website" />
+                    <meta property="og:type" content="website" />
+                    <meta
+                        name="image"
+                        property="og:image"
+                        content="./websiteimg.png"
+                    ></meta>
+                    <meta
+                        property="og:description"
+                        content="During my time in the first few weeks of quaratine from COVID-19, I decided to create a personal website. This website was not just to hone my skills in website development, but to also showcase my passions. In my website you'll find my personal projects, hobbies, and other works that all encompass my life in some way. Built using React JS and hosted with GitHub Pages."
+                    />
+                    <meta property="og:url" content="//mrthomaschin.github.io" />
+                    <meta name="author" content="Thomas Chin"></meta>
+                    <meta charset="utf-8" />
+                    <meta
+                        name="viewport"
+                        content="width=device-width, initial-scale=1, shrink-to-fit=no"
+                    />
+                </head>
+                <body>
+                    {/* NavBar */}
+                    <NavBar />
+                    {/* Main Section */}
+                    <div id="main-page">
+                        <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4">
+                            <Fade>
+                                <img
+                                class="profile-pic shadow"
+                                src={require("../Assets/Images/me.png")}
+                                alt="Me"
+                                />
+                            </Fade>
+                            </div>
+                            <div class="col-md-8">
+                            <Fade class="container">
+                                <div class="row">
+                                <div class="title-text-1">Hi there! I'm Thomas.</div>
+                                </div>
+                                <div class="row">
+                                <div class="body-text-1">
+                                    Fascinated in all things technology. Deeply passionate
+                                    about creating others that will have a positive impact
+                                    on the world and benefit others!
+                                </div>
+                                </div>
+                                <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="scroll-button">
+                                    <Link
+                                        activeClass="active"
+                                        to="skills-brief"
+                                        spy={true}
+                                        smooth={true}
+                                        duration={1400}
+                                    >
+                                        <div class="button-dark-blue">Learn More</div>
+                                    </Link>
+                                    </div>
+                                    <a
+                                    class="button-light-blue resume-link"
+                                    href="Thomas_Chin_Resume.pdf"
+                                    download
+                                    >
+                                    Resumé
+                                    </a>
+                                </div>
+                                </div>
+                            </Fade>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    {/* Skills set */}
+                    <div id="skills-brief">
+                        <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                <div class="title-text-2">My stack.</div>
+                                </div>
+                                <div class="row justify-content-center">
+                                <div id="skills-tools-box">
+                                    <div class="row justify-content-center">
+                                    <div class="title-text-3 ">Tools</div>
+                                    </div>
+                                    <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="row ">
+                                        <div class="body-text-1">React JS</div>
+                                        </div>
+                                        <div class="row">
+                                        <div class="body-text-1">Bootstrap</div>
+                                        </div>
+                                        <div class="row">
+                                        <div class="body-text-1">ASP .NET Core</div>
+                                        </div>
+                                        <div class="row">
+                                        <div class="body-text-1">MVC</div>
+                                        </div>
+                                        <div class="row">
+                                        <div class="body-text-1">Node JS</div>
+                                        </div>
+                                        <div class="row">
+                                        <div class="body-text-1">RESTful API</div>
+                                        </div>
+                                        <div class="row">
+                                        <div class="body-text-1">Flask</div>
+                                        </div>
+                                        <div class="row">
+                                        <div class="body-text-1">MongoDB</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                        <div class="body-text-1">Firestore</div>
+                                        </div>
+                                        <div class="row">
+                                        <div class="body-text-1">JSON</div>
+                                        </div>
+                                        <div class="row">
+                                        <div class="body-text-1">Embedded Systems</div>
+                                        </div>
+                                        <div class="row">
+                                        <div class="body-text-1">Verilog</div>
+                                        </div>
+                                        <div class="row">
+                                        <div class="body-text-1">
+                                            Arduino/Raspberry Pi
+                                        </div>
+                                        </div>
+                                        <div class="row">
+                                        <div class="body-text-1">Git</div>
+                                        </div>
+                                        <div class="row">
+                                        <div class="body-text-1">
+                                            Visual Studio / VS Code
+                                        </div>
+                                        </div>
+                                        <div class="row">
+                                        <div class="body-text-1">Figma</div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-md-6">
+                            <div class="container">
+                                <div id="skills-col-2" class="row justify-content-center">
+                                <div class="col-md-6">
+                                    <div class="container">
+                                    <div class="row skills-language-parent">
+                                        <img
+                                        class="skills-icon"
+                                        src={require("../Assets/Images/Icons/Skills/icons8-c++-480.png")}
+                                        alt="C++"
+                                        />
+                                        <div class="skills-icon-name">C++</div>
+                                    </div>
+                                    <div class="row skills-language-parent">
+                                        <img
+                                        class="skills-icon"
+                                        src={require("../Assets/Images/Icons/Skills/icons8-java-480.png")}
+                                        alt="Java"
+                                        />
+                                        <div class="skills-icon-name">Java</div>
+                                    </div>
+                                    <div class="row skills-language-parent">
+                                        <img
+                                        class="skills-icon"
+                                        src={require("../Assets/Images/Icons/Skills/icons8-c-programming-480.png")}
+                                        alt="C"
+                                        />
+                                        <div class="skills-icon-name">C</div>
+                                    </div>
+                                    <div class="row skills-language-parent">
+                                        <img
+                                        class="skills-icon"
+                                        src={require("../Assets/Images/Icons/Skills/icons8-c-sharp-logo-480.png")}
+                                        alt="C#"
+                                        />
+                                        <div class="skills-icon-name">C#</div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="container">
+                                    <div class="row skills-language-parent">
+                                        <img
+                                        class="skills-icon"
+                                        src={require("../Assets/Images/Icons/Skills/icons8-html-5-480.png")}
+                                        alt="HTML"
+                                        />
+                                        <div class="skills-icon-name">HTML</div>
+                                    </div>
+                                    <div class="row skills-language-parent">
+                                        <img
+                                        class="skills-icon"
+                                        src={require("../Assets/Images/Icons/Skills/icons8-css3-480.png")}
+                                        alt="CSS"
+                                        />
+                                        <div class="skills-icon-name">CSS</div>
+                                    </div>
+                                    <div class="row skills-language-parent">
+                                        <img
+                                        class="skills-icon"
+                                        src={require("../Assets/Images/Icons/Skills/icons8-javascript-480.png")}
+                                        alt="Javascript"
+                                        />
+                                        <div class="skills-icon-name">Javascript</div>
+                                    </div>
+                                    <div class="row skills-language-parent">
+                                        <img
+                                        class="skills-icon"
+                                        src={require("../Assets/Images/Icons/Skills/icons8-python-480.png")}
+                                        alt="Python"
+                                        />
+                                        <div class="skills-icon-name">Python</div>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    {/* Short summary about projects */}
+                    <div id="projects-brief">
+                        <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="title-text-4">Projects</div>
+                        </div>
+                        <div class="row">
+                            <AddProject />
+                        </div>
+                        </div>
+                    </div>
+                    {/* Contact Info */}
+                    <div id="contact-info">
+                        <div class="row">
+                        <div class="col text-center">
+                            <div class="title-text-4-white">Let's chat!</div>
+                            <div class="container">
+                            <div class="row justify-content-center icon-center">
+                                <div id="contact-info-bar">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-2">
+                                    <a
+                                        id="email-link"
+                                        href="mailto: thomasc246@gmail.com"
+                                    >
+                                        <img
+                                        src={require("../Assets/Images/Icons/Handles/mail.png")}
+                                        class="home-handle-icon"
+                                        alt="instagram"
+                                        />
+                                    </a>
+                                    </div>
+                                    <div class="col-md-2">
+                                    <a
+                                        class="social"
+                                        href="https://www.linkedin.com/in/mrthomaschin/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img
+                                        src={require("../Assets/Images/Icons/Handles/linkedin.png")}
+                                        class="home-handle-icon"
+                                        alt="linkedin"
+                                        />
+                                    </a>
+                                    </div>
+                                    <div class="col-md-2">
+                                    <a
+                                        class="social"
+                                        href="https://github.com/mrthomaschin"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img
+                                        src={require("../Assets/Images/Icons/Handles/github.png")}
+                                        class="home-handle-icon"
+                                        alt="github"
+                                        />
+                                    </a>
+                                    </div>
+                                    <div class="col-md-2">
+                                    <a
+                                        class="social"
+                                        href="https://www.instagram.com/chinsanity_/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img
+                                        src={require("../Assets/Images/Icons/Handles/instagram.png")}
+                                        class="home-handle-icon"
+                                        alt="instagram"
+                                        />
+                                    </a>
+                                    </div>
+                                    <div class="col-md-2">
+                                    <a
+                                        class="social"
+                                        href="https://www.facebook.com/mr.thomaschin"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img
+                                        src={require("../Assets/Images/Icons/Handles/facebook.png")}
+                                        class="home-handle-icon"
+                                        alt="instagram"
+                                        />
+                                    </a>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </body>
+            </div>
+        );
+    }
+}
+
+export default Home

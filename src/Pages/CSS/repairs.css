@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "circular-stf";
+  src: url("../../Assets/Fonts/CircularStd-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "circular-std-med";
+  src: url("../../Assets/Fonts/CircularStd-Medium.ttf") format("truetype");
+}
+
+#repairs-title {
+  background-color: #181830;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 15%;
+  padding-right: 10%;
+}
+
+#repairs-body {
+  background-color: #363a46;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-right: 6%;
+  padding-left: 6%;
+}
+
+#repairs-list {
+  background-color: #001540;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-right: 6%;
+  padding-left: 6%;
+}
+
+#main-text-repairs {
+  font-size: 75px;
+  color: #ffffff;
+  font-family: "circular-std-med";
+}
+
+#main-pic {
+  max-width: 85%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.text-repairs {
+  font-size: 30px;
+  color: #ffffff;
+  font-family: "circular-std-med";
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
