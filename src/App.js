@@ -1,6 +1,6 @@
 import './App.css';
 import React, { Component } from "react";
-import { BrowserRouter,Routes, Route } from "react-router-dom";
+import { HashRouter,Routes, Route } from "react-router-dom";
 
 // Pages
 import Home from './Pages/Home';
@@ -14,7 +14,7 @@ import Projects from './Pages/Projects';
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -24,7 +24,7 @@ class App extends Component {
           <Route path="/projects" element={<Projects />} />
           <Route path="/repairs" element={<Repairs />} />
         </Routes>
-      </BrowserRouter> 
+      </HashRouter> 
     );
   }
 }
